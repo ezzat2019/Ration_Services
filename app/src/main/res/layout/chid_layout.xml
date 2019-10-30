@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/corner_shape"
+    app:cardCornerRadius="17dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cafe">
+
+
+            <Button
+                android:id="@+id/btn_add_child1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v50"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/colorPrimary"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="add client"
+                android:textColor="#fff"
+
+                />
+
+            <TextView
+
+                android:id="@+id/test_login1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="add your child of member"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:id="@+id/v30"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/test_login1"
+
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txt_name_child"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v30"
+                android:layout_marginStart="48dp"
+
+                android:layout_marginTop="32dp"
+                android:text="Name : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ed_name_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v30"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="4dp"
+                android:layout_toRightOf="@+id/txt_name_child"
+                android:hint="name"
+                android:singleLine="true" />
+
+            <View
+                android:id="@+id/v90"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ed_name_child"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="100dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txt_id_child"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v90"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="32dp"
+                android:text="Card ID : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ed_id_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v90"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="4dp"
+                android:layout_toRightOf="@+id/txt_id_child"
+                android:hint="## ### ### ### ###"
+                android:inputType="numberSigned"
+                android:maxLength="14"
+                android:singleLine="true" />
+
+            <View
+                android:id="@+id/v150"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ed_id_child"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="100dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txt_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v150"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="32dp"
+                android:text="Age : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ed_age_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v150"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="4dp"
+                android:layout_toRightOf="@+id/txt_age"
+                android:hint="age"
+                android:inputType="numberSigned"
+                android:maxLength="14"
+                android:singleLine="true" />
+
+            <View
+                android:id="@+id/v50"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ed_age_child"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="100dp"
+                android:background="@color/colorAccent" />
+
+
+            <View
+                android:id="@+id/v900"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/btn_add_child1"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/colorAccent" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</androidx.cardview.widget.CardView>

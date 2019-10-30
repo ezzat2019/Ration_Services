@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:background="@color/colorPrimaryDark"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".StartServicesActivity"
+    tools:showIn="@layout/activity_start_services">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+         app:cardCornerRadius="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cafe"
+
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/test_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Scan Bannner"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="122dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/test_login"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/test_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:text="SCAN QR_CODE "
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/colorPrimary" />
+
+            <ImageButton
+                android:id="@+id/img_btn_scan"
+                style="@android:style/Widget.Holo.ImageButton"
+                android:layout_width="80dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/test_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:fitsSystemWindows="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:scaleType="centerCrop"
+                android:src="@drawable/scan" />
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/img_btn_scan"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/test_login2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v2"
+                android:layout_marginTop="40dp"
+                android:text="Login Admin Bannner"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <View
+                android:id="@+id/v3"
+                android:layout_width="190dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/test_login2"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/test_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="40dp"
+                android:text="you can login by phone number and email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/test_3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_shape_capsule"
+                android:fitsSystemWindows="true"
+                android:paddingStart="45dp"
+                android:paddingEnd="45dp"
+                android:text="login"
+                android:textColor="#fff"
+
+                />
+
+            <View
+                android:id="@+id/v4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/btn_login"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="75dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/colorAccent" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.core.widget.NestedScrollView>

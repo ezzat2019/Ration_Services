@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".admin_activities.AdminActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_detiel_admin"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:title="Admin"
+        app:titleTextColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/test_login1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_detiel_admin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="choose opteration you need"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/test_login1"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="8dp"
+        android:padding="8dp"
+        app:cardCornerRadius="19dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:id="@+id/test_login2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="can add new client from here"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/test_login2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:paddingStart="45dp"
+                android:paddingEnd="45dp"
+                android:background="@drawable/btn_shape_capsule"
+                android:onClick="add"
+
+                android:padding="4dp"
+                android:text="add new client"
+                android:textColor="#fff"
+
+                />
+
+            <View
+                android:id="@+id/v8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/btn_add"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="80dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+
+                android:id="@+id/test_login3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_add"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:text="update client from here"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/btn_ubdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/test_login3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:paddingStart="45dp"
+                android:paddingEnd="45dp"
+                android:background="@drawable/btn_shape_capsule"
+                android:onClick="update"
+                android:padding="4dp"
+                android:text="update client"
+                android:textColor="#fff"
+
+                />
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/btn_ubdate"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

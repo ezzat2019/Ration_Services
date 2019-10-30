@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:elevation="7dp"
+    app:cardCornerRadius="24dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:padding="16dp"
+        android:background="@color/cafe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txt_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:text="Card id : "
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ed_id_member"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:enabled="false"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/txt_id"
+            android:inputType="numberSigned"
+            android:maxLength="14"
+            android:singleLine="true" />
+
+
+
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ed_id_member"
+            android:layout_marginStart="48dp"
+
+            android:layout_marginTop="16dp"
+            android:text="Name   : "
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ed_name_member"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_below="@id/ed_id_member"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:layout_marginEnd="4dp"
+            android:layout_toEndOf="@+id/txt_name"
+            android:singleLine="true" />
+
+
+        <TextView
+            android:id="@+id/txt_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ed_name_member"
+            android:layout_marginStart="48dp"
+
+            android:layout_marginTop="16dp"
+            android:text="Age      : "
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ed_age_member"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ed_name_member"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:layout_marginEnd="4dp"
+            android:layout_toEndOf="@+id/txt_name"
+            android:singleLine="true" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_below="@id/ed_age_member"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_update_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="5"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:background="@drawable/btn_shape_capsule"
+                android:text="update"
+                android:textColor="#fff"
+
+                />
+            <Button
+                android:id="@+id/btn_del_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="16dp"
+                android:layout_weight="5"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="8dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:background="@drawable/btn_shape_capsule"
+                android:text="delete"
+                android:textColor="#fff"
+
+                />
+
+        </LinearLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

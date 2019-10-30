@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.programmer.rationservices">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ration_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ration_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MemberActivity"></activity>
+        <activity
+            android:name=".admin_activities.AdminOperationUpdateActivity"
+            android:parentActivityName=".admin_activities.AdminActivity" />
+        <activity
+            android:name=".admin_activities.AdminOperationAddActivity"
+            android:parentActivityName=".admin_activities.AdminActivity" />
+        <activity
+            android:name=".scan_activities.ScanAdminActivity"
+            android:parentActivityName=".admin_activities.AdminActivity" />
+        <activity android:name=".admin_activities.AdminActivity" />
+        <activity
+            android:name=".client_activities.DetielClientActivity"
+            android:parentActivityName=".StartServicesActivity" />
+        <activity
+            android:name=".scan_activities.QRActivity"
+            android:parentActivityName=".StartServicesActivity" />
+        <activity
+            android:name=".StartServicesActivity"
+            android:label="@string/title_activity_start_services"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

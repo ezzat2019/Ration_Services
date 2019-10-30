@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "328504894307",
+    "firebase_url": "https://ration-services.firebaseio.com",
+    "project_id": "ration-services",
+    "storage_bucket": "ration-services.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328504894307:android:81b76f9bd37b8053d2e956",
+        "android_client_info": {
+          "package_name": "com.example.programmer.rationservices"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328504894307-ds0g9apd4b3qppmb8lmt9g13j3qecoau.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.programmer.rationservices",
+            "certificate_hash": "ce09f160a3862ba7e376cfa607b5dfe6b3cc3e76"
+          }
+        },
+        {
+          "client_id": "328504894307-b3itdbotp39dt7v5cft1fsdb2vad751h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqejnc6HkbLSLp3c1rHmP6NASMXWfvxTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328504894307-b3itdbotp39dt7v5cft1fsdb2vad751h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
