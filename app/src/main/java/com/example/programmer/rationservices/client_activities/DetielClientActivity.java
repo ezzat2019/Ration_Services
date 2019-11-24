@@ -14,10 +14,11 @@ import com.example.programmer.rationservices.scan_activities.QRActivity;
 
 public class DetielClientActivity extends AppCompatActivity {
 
-    int i = 0; // fot test
+
     // ui
     private Toolbar toolbar;
     // var
+    int i = 0; // fot test
     private String detielOfVCard;
     private ClientItem clientItem;
 

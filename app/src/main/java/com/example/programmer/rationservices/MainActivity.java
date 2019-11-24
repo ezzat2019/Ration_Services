@@ -22,59 +22,26 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.programmer.rationservices.custom_classes.PrefManager;
 
 public class MainActivity extends AppCompatActivity {
-    private ViewPager viewPager;
-    private MyViewPagerAdapter myViewPagerAdapter;
-    private LinearLayout dotsLayout;
-    private TextView[] dots;
-    private int[] layouts;
-    private Button btnSkip, btnNext;
-    //  viewpager change listener
-    ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
-
-        @Override
-        public void onPageSelected(int position) {
-            addBottomDots(position);
-
-            // changing the next button text 'NEXT' / 'GOT IT'
-            if (position == layouts.length - 1) {
-                // last page. make button text to GOT IT
-                btnNext.setText(getString(R.string.start));
-                btnSkip.setVisibility(View.GONE);
-            } else {
-                // still pages are left
-                btnNext.setText(getString(R.string.next));
-                btnSkip.setVisibility(View.VISIBLE);
-            }
-        }
-
-        @Override
-        public void onPageScrolled(int arg0, float arg1, int arg2) {
-
-        }
-
-        @Override
-        public void onPageScrollStateChanged(int arg0) {
-
-        }
-    };
 
 
     // ui
-
+    private ViewPager viewPager;
+    private LinearLayout dotsLayout;
+    private Button btnSkip, btnNext;
+    private TextView[] dots;
 
     // var
+    private MyViewPagerAdapter myViewPagerAdapter;
+    private int[] layouts;
     private PrefManager prefManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        prefManager = new PrefManager(this);
-        if (!prefManager.isFirstTimeLaunch()) {
-            launchHomeScreen();
-            finish();
-        }
+        buildPrefernce();
 
         // Making notification bar transparent
         if (Build.VERSION.SDK_INT >= 21) {
@@ -83,30 +50,25 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        viewPager = findViewById(R.id.view_pager);
-        dotsLayout = findViewById(R.id.layoutDots);
-        btnSkip = findViewById(R.id.btn_skip);
-        btnNext = findViewById(R.id.btn_next);
+        setupViews();
+
+        buildCustomLayout();
 
 
-        // layouts of all welcome sliders
-        // add few more layouts if you want
-        layouts = new int[]{
-                R.layout.activity_welcom1,
-                R.layout.activity_welcome2,
-                R.layout.activity_welcome3
-        };
+        buildBtnClick();
 
-        // adding bottom dots
-        addBottomDots(0);
 
-        // making notification bar transparent
-        changeStatusBarColor();
+    }
 
-        myViewPagerAdapter = new MyViewPagerAdapter();
-        viewPager.setAdapter(myViewPagerAdapter);
-        viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+    private void buildPrefernce() {
+        prefManager = new PrefManager(this);
+        if (!prefManager.isFirstTimeLaunch()) {
+            launchHomeScreen();
+            finish();
+        }
+    }
 
+    private void buildBtnClick() {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,7 +90,31 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
 
+    private void buildCustomLayout() {
+        layouts = new int[]{
+                R.layout.activity_welcom1,
+                R.layout.activity_welcome2,
+                R.layout.activity_welcome3
+        };
+
+        // adding bottom dots
+        addBottomDots(0);
+
+        // making notification bar transparent
+        changeStatusBarColor();
+
+        myViewPagerAdapter = new MyViewPagerAdapter();
+        viewPager.setAdapter(myViewPagerAdapter);
+        viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+    }
+
+    private void setupViews() {
+        viewPager = findViewById(R.id.view_pager);
+        dotsLayout = findViewById(R.id.layoutDots);
+        btnSkip = findViewById(R.id.btn_skip);
+        btnNext = findViewById(R.id.btn_next);
 
     }
 
@@ -161,9 +147,7 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    /**
-     * Making notification bar transparent
-     */
+
     private void changeStatusBarColor() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
@@ -172,9 +156,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * View pager adapter
-     */
+
     public class MyViewPagerAdapter extends PagerAdapter {
         private LayoutInflater layoutInflater;
 
@@ -208,4 +190,35 @@ public class MainActivity extends AppCompatActivity {
             container.removeView(view);
         }
     }
+
+
+    ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
+
+        @Override
+        public void onPageSelected(int position) {
+            addBottomDots(position);
+
+            // changing the next button text 'NEXT' / 'GOT IT'
+            if (position == layouts.length - 1) {
+                // last page. make button text to GOT IT
+                btnNext.setText(getString(R.string.start));
+                btnSkip.setVisibility(View.GONE);
+            } else {
+                // still pages are left
+                btnNext.setText(getString(R.string.next));
+                btnSkip.setVisibility(View.VISIBLE);
+            }
+        }
+
+        @Override
+        public void onPageScrolled(int arg0, float arg1, int arg2) {
+
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int arg0) {
+
+        }
+    };
+
 }

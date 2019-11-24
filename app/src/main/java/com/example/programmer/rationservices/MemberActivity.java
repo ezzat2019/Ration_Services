@@ -44,22 +44,29 @@ public class MemberActivity extends AppCompatActivity implements OnItemRecycleVi
         setContentView(R.layout.activity_member);
 
         swipeRefreshLayout = findViewById(R.id.refersh);
-        if (getIntent().hasExtra("is_user")) {
-            is_user = getIntent().getBooleanExtra("is_user", false);
-        }
-        AdminOperationAddActivity.databaseReference.keepSynced(true);
-        if (getIntent().hasExtra("member")) {
-            id = getIntent().getStringExtra("member");
-        } else {
-            Toast.makeText(this, "there is a proplem please try again!", Toast.LENGTH_LONG).show();
-            onBackPressed();
-        }
+
+        buildIntent();
 
         list = new ArrayList<>();
 
         setupRecMember();
 
         buildSwipeLayout();
+    }
+
+    private void buildIntent() {
+        if (getIntent().hasExtra("is_user")) {
+            is_user = getIntent().getBooleanExtra("is_user", false);
+        }
+
+        AdminOperationAddActivity.databaseReference.keepSynced(true);
+
+        if (getIntent().hasExtra("member")) {
+            id = getIntent().getStringExtra("member");
+        } else {
+            Toast.makeText(this, "there is a proplem please try again!", Toast.LENGTH_LONG).show();
+            onBackPressed();
+        }
     }
 
 

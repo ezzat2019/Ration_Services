@@ -73,26 +73,11 @@ public class AdminOperationUpdateActivity extends AppCompatActivity {
         fillToolBar();
 
         buildAllEditedTextAndFill();
+
         checkUserLogin();
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d("ccccccc", "stop");
-    }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d("ccccccc", "start");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d("ccccccc", "resume");
-    }
 
     private void checkUserLogin() {
         if (getIntent().hasExtra(QRActivity.RESULT_ID)) {

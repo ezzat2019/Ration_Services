@@ -24,6 +24,12 @@ public class AdminActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
+
+        buildIntent();
+
+    }
+
+    private void buildIntent() {
         if (getIntent().hasExtra("admin")) {
             String email = (String) getIntent().getExtras().get("admin");
             if (!email.equals("admin@yahoo.com")) {

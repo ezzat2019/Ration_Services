@@ -19,7 +19,7 @@ public class RecMemberAdapter extends RecyclerView.Adapter<RecMemberAdapter.VH> 
     public static final String UPDATE = "update";
     public static final String DEL = "del";
 
-
+// var
     private static OnItemRecycleViewClickListner onItemRecycleViewClickListner;
     private static boolean b;
     private List<FamilyClientItem> familyClientItemList;

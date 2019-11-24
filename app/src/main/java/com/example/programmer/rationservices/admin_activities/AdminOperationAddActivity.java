@@ -29,11 +29,7 @@ import java.util.HashMap;
 public class AdminOperationAddActivity extends AppCompatActivity {
     public static final String DB_REF = "clients";
     public static final String DB_NAME_MEMBER = "member_name";
-    public static FirebaseDatabase database = FirebaseDatabase.getInstance();
-    public static DatabaseReference databaseReference = database.getReference(DB_REF);
-    public static String name, email, phone, city, street, id_card, date;
-    public FamilyClientItem familyClientItemList;
-    int i = 0;
+
     // ui
     private Toolbar toolbar;
     private EditText ed_name, ed_email, ed_phone, ed_city, ed_street, ed_id_card, ed_balance;
@@ -41,6 +37,11 @@ public class AdminOperationAddActivity extends AppCompatActivity {
     private String detielOfVCard;
     private ClientItem clientItem;
     private Double balance;
+    public static FirebaseDatabase database = FirebaseDatabase.getInstance();
+    public static DatabaseReference databaseReference = database.getReference(DB_REF);
+    public static String name, email, phone, city, street, id_card, date;
+    public FamilyClientItem familyClientItemList;
+    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
