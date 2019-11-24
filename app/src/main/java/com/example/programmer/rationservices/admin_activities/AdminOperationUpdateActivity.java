@@ -168,11 +168,8 @@ public class AdminOperationUpdateActivity extends AppCompatActivity {
         ed_id_card = findViewById(R.id.ed_id2);
         ed_street = findViewById(R.id.ed_street2);
         ed_phone = findViewById(R.id.ed_phone2);
-
-
         id_card = clientItem.getId_card();
         ed_id_card.setText(id_card);
-
         ed_id_card.setEnabled(false);
 
 
@@ -245,6 +242,13 @@ public class AdminOperationUpdateActivity extends AppCompatActivity {
     public void addUpdate(View view) {
         java.util.Date date1 = new Date();
         date = date1.toString();
+
+        name=ed_name.getText().toString().trim();
+        email=ed_email.getText().toString().trim();
+        street=ed_street.getText().toString().trim();
+        city=ed_city.getText().toString().trim();
+        phone=ed_phone.getText().toString().trim();
+
 
         HashMap<String, Object> map = new HashMap<>();
         map.put("name", name);
