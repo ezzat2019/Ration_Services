@@ -242,6 +242,7 @@ public class AdminOperationUpdateActivity extends AppCompatActivity {
     public void addUpdate(View view) {
         java.util.Date date1 = new Date();
         date = date1.toString();
+      String date2 = date1.toString();
 
         name=ed_name.getText().toString().trim();
         email=ed_email.getText().toString().trim();
