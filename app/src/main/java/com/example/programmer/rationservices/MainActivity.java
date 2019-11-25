@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private MyViewPagerAdapter myViewPagerAdapter;
     private int[] layouts;
     private PrefManager prefManager;
+    int h;
 
 
     @Override
